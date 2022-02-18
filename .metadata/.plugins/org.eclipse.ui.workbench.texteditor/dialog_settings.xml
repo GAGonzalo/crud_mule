@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<item key="selection" value=""/>
+		<list key="findhistory">
+			<item value="Copy_Of_"/>
+			<item value="error-handler"/>
+			<item value="error"/>
+			<item value="error_handler"/>
+			<item value="ERROR"/>
+			<item value="ERROR 32"/>
+			<item value="Transform Message"/>
+			<item value="Transform Messagee"/>
+			<item value="Status and Message to Respons"/>
+			<item value="Copy_Of"/>
+			<item value="cod_postal"/>
+			<item value="zipcode"/>
+			<item value="Copy_of_"/>
+			<item value="accounts"/>
+		</list>
+		<list key="replacehistory">
+			<item value=""/>
+			<item value="Status &amp; Message to Response"/>
+			<item value="Transform Message"/>
+			<item value="Status and Message to Response"/>
+			<item value="ciudad"/>
+			<item value="provincia"/>
+			<item value="pais"/>
+			<item value="personas"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="1137"/>
+		<item key="DIALOG_Y_ORIGIN" value="263"/>
+		<item key="DIALOG_WIDTH" value="284"/>
+		<item key="DIALOG_HEIGHT" value="391"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+</section>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:validation="http://www.mulesoft.org/schema/mule/validation"
+	xmlns:db="http://www.mulesoft.org/schema/mule/db"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
+http://www.mulesoft.org/schema/mule/validation http://www.mulesoft.org/schema/mule/validation/current/mule-validation.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<db:config name="Database_Config" doc:name="Database Config" doc:id="d7ddaa82-7064-44a0-aa40-63489fee95c3" >
+		<db:my-sql-connection host="localhost" port="3306" user="root" password="admin" database="evaluacion" />
+	</db:config>
+	<error-handler name="system_error_handlerError_Handler" doc:id="2f60923e-64c7-43da-bfcd-22920649a6b8" >
+		<on-error-propagate enableNotifications="true" logException="false" doc:name="On Error Propagate" doc:id="1b52406a-d59f-4beb-b305-d3668a1d322f" type="DB:BAD_SQL_SYNTAX">
+			<logger level="ERROR" doc:name="Logger" doc:id="90fab521-e373-4041-8512-e2c6d69a13df" message="ERROR #[error.errorType]"/>
+			<ee:transform doc:name="Transform Message" doc:id="d83b7e6c-136a-4c24-acb6-86d0ee716107" >
+				<ee:message >
+					<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+	status: 500,
+	message: "Internal Server Error"
+}]]></ee:set-payload>
+				</ee:message>
+			</ee:transform>
+		</on-error-propagate>
+		<on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="046b7ea5-157b-4fd7-b204-df4643ca7b46" type="DB:CONNECTIVITY">
+			<logger level="ERROR" doc:name="Logger" doc:id="18eb1e9f-797d-4912-ae45-639757aef2a8" message="ERROR #[error.errorType]" />
+			<ee:transform doc:name="Transform Message" doc:id="7cecbe46-8962-4885-a26b-16bbcaddd5bd" >
+				<ee:message >
+					<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+	status: 503,
+	message: "Internal Server Error"
+}]]></ee:set-payload>
+				</ee:message>
+			</ee:transform>
+		</on-error-propagate>
+		<on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="94e6a949-0d22-472d-a370-efb43bd68d34" type="DB:QUERY_EXECUTION">
+			<logger level="ERROR" doc:name="Logger" doc:id="5b24e14b-f3d2-43e3-9816-0739896b7bfc" message="ERROR #[error.errorType]" />
+			<ee:transform doc:name="Transform Message" doc:id="b10a8bb7-9e14-46b3-9fb4-b9051e6219f4" >
+				<ee:message >
+					<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+	status: 503,
+	message: "Internal Server Error"
+}]]></ee:set-payload>
+				</ee:message>
+			</ee:transform>
+		</on-error-propagate>
+		<on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="7018bd6f-cbcd-483f-b7f1-47e8f940e73a" type="ANY">
+			<logger level="ERROR" doc:name="Logger" doc:id="00458a8e-b8b9-489b-bcc3-4f89eb62b433" message="ERROR #[error.errorType]" />
+			<ee:transform doc:name="Transform Message" doc:id="003544bf-5009-4e8c-bb1c-573caf41228e" >
+				<ee:message >
+					<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+	status: 500,
+	message: "Internal Server Error"
+}]]></ee:set-payload>
+				</ee:message>
+			</ee:transform>
+		</on-error-propagate>
+	</error-handler>
+</mule>

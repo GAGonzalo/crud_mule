@@ -1,0 +1,1014 @@
+!SESSION 2022-02-17 19:40:33.964 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_AR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+This is a continuation of log file C:\Users\DNT\AnypointStudio\evaluacion\.metadata\.bak_0.log
+Created Time: 2022-02-17 20:33:05.560
+
+!ENTRY org.mule.tooling.core 4 0 2022-02-17 20:33:05.561
+!MESSAGE Error while resolving metadata propagation
+!STACK 0
+org.mule.tooling.client.api.exception.ToolingException: Error while creating application model
+org.mule.runtime.api.exception.MuleRuntimeException: A reference error-handler cannot have on-errors.
+
+	at org.mule.tooling.client.internal.DefaultApplicationModelFactory.createApplicationModel(DefaultApplicationModelFactory.java:69)
+	at org.mule.tooling.client.internal.application.DefaultApplication.lambda$newToolingApplicationModelLazyValue$6(DefaultApplication.java:152)
+	at org.mule.runtime.api.util.LazyValue.get(LazyValue.java:77)
+	at org.mule.tooling.client.internal.application.AbstractArtifact.getApplicationModel(AbstractArtifact.java:217)
+	at org.mule.tooling.client.internal.datasense.DataSenseArtifact.getToolingApplicationModel(DataSenseArtifact.java:88)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.internalResolveDataSense(DefaultDataSenseService.java:135)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.resolveDataSense(DefaultDataSenseService.java:109)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.invokeMethod(DefaultDataSenseService.java:278)
+	at jdk.internal.reflect.GeneratedMethodAccessor439.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mule.tooling.client.bootstrap.internal.reflection.Dispatcher$ToolingCallable.call(Dispatcher.java:241)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.mule.tooling.core 4 0 2022-02-17 20:33:05.577
+!MESSAGE Error while resolving component datasense
+!STACK 0
+org.mule.tooling.client.api.exception.ToolingException: Error while creating application model
+org.mule.runtime.api.exception.MuleRuntimeException: A reference error-handler cannot have on-errors.
+
+	at org.mule.tooling.client.internal.DefaultApplicationModelFactory.createApplicationModel(DefaultApplicationModelFactory.java:69)
+	at org.mule.tooling.client.internal.application.DefaultApplication.lambda$newToolingApplicationModelLazyValue$6(DefaultApplication.java:152)
+	at org.mule.runtime.api.util.LazyValue.get(LazyValue.java:77)
+	at org.mule.tooling.client.internal.application.AbstractArtifact.getApplicationModel(AbstractArtifact.java:217)
+	at org.mule.tooling.client.internal.datasense.DataSenseArtifact.getToolingApplicationModel(DataSenseArtifact.java:88)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.internalResolveComponentDataSense(DefaultDataSenseService.java:168)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.resolveComponentDataSense(DefaultDataSenseService.java:118)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.invokeMethod(DefaultDataSenseService.java:287)
+	at jdk.internal.reflect.GeneratedMethodAccessor439.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mule.tooling.client.bootstrap.internal.reflection.Dispatcher$ToolingCallable.call(Dispatcher.java:241)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.mule.tooling.core 4 0 2022-02-17 20:33:06.731
+!MESSAGE Error while resolving metadata propagation
+!STACK 0
+org.mule.tooling.client.api.exception.ToolingException: Error while creating application model
+org.mule.runtime.api.exception.MuleRuntimeException: A reference error-handler cannot have on-errors.
+
+	at org.mule.tooling.client.internal.DefaultApplicationModelFactory.createApplicationModel(DefaultApplicationModelFactory.java:69)
+	at org.mule.tooling.client.internal.application.DefaultApplication.lambda$newToolingApplicationModelLazyValue$6(DefaultApplication.java:152)
+	at org.mule.runtime.api.util.LazyValue.get(LazyValue.java:77)
+	at org.mule.tooling.client.internal.application.AbstractArtifact.getApplicationModel(AbstractArtifact.java:217)
+	at org.mule.tooling.client.internal.datasense.DataSenseArtifact.getToolingApplicationModel(DataSenseArtifact.java:88)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.internalResolveDataSense(DefaultDataSenseService.java:135)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.resolveDataSense(DefaultDataSenseService.java:109)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.invokeMethod(DefaultDataSenseService.java:278)
+	at jdk.internal.reflect.GeneratedMethodAccessor439.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mule.tooling.client.bootstrap.internal.reflection.Dispatcher$ToolingCallable.call(Dispatcher.java:241)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.mule.tooling.core 4 0 2022-02-17 20:33:06.746
+!MESSAGE Error while resolving component datasense
+!STACK 0
+org.mule.tooling.client.api.exception.ToolingException: Error while creating application model
+org.mule.runtime.api.exception.MuleRuntimeException: A reference error-handler cannot have on-errors.
+
+	at org.mule.tooling.client.internal.DefaultApplicationModelFactory.createApplicationModel(DefaultApplicationModelFactory.java:69)
+	at org.mule.tooling.client.internal.application.DefaultApplication.lambda$newToolingApplicationModelLazyValue$6(DefaultApplication.java:152)
+	at org.mule.runtime.api.util.LazyValue.get(LazyValue.java:77)
+	at org.mule.tooling.client.internal.application.AbstractArtifact.getApplicationModel(AbstractArtifact.java:217)
+	at org.mule.tooling.client.internal.datasense.DataSenseArtifact.getToolingApplicationModel(DataSenseArtifact.java:88)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.internalResolveComponentDataSense(DefaultDataSenseService.java:168)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.resolveComponentDataSense(DefaultDataSenseService.java:118)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.invokeMethod(DefaultDataSenseService.java:287)
+	at jdk.internal.reflect.GeneratedMethodAccessor439.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mule.tooling.client.bootstrap.internal.reflection.Dispatcher$ToolingCallable.call(Dispatcher.java:241)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.mule.tooling.core 4 0 2022-02-17 20:33:08.947
+!MESSAGE Error while resolving metadata propagation
+!STACK 0
+org.mule.tooling.client.api.exception.ToolingException: Error while creating application model
+org.mule.runtime.api.exception.MuleRuntimeException: A reference error-handler cannot have on-errors.
+
+	at org.mule.tooling.client.internal.DefaultApplicationModelFactory.createApplicationModel(DefaultApplicationModelFactory.java:69)
+	at org.mule.tooling.client.internal.application.DefaultApplication.lambda$newToolingApplicationModelLazyValue$6(DefaultApplication.java:152)
+	at org.mule.runtime.api.util.LazyValue.get(LazyValue.java:77)
+	at org.mule.tooling.client.internal.application.AbstractArtifact.getApplicationModel(AbstractArtifact.java:217)
+	at org.mule.tooling.client.internal.datasense.DataSenseArtifact.getToolingApplicationModel(DataSenseArtifact.java:88)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.internalResolveDataSense(DefaultDataSenseService.java:135)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.resolveDataSense(DefaultDataSenseService.java:109)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.invokeMethod(DefaultDataSenseService.java:278)
+	at jdk.internal.reflect.GeneratedMethodAccessor439.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mule.tooling.client.bootstrap.internal.reflection.Dispatcher$ToolingCallable.call(Dispatcher.java:241)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.mule.tooling.core 4 0 2022-02-17 20:33:08.964
+!MESSAGE Error while resolving component datasense
+!STACK 0
+org.mule.tooling.client.api.exception.ToolingException: Error while creating application model
+org.mule.runtime.api.exception.MuleRuntimeException: A reference error-handler cannot have on-errors.
+
+	at org.mule.tooling.client.internal.DefaultApplicationModelFactory.createApplicationModel(DefaultApplicationModelFactory.java:69)
+	at org.mule.tooling.client.internal.application.DefaultApplication.lambda$newToolingApplicationModelLazyValue$6(DefaultApplication.java:152)
+	at org.mule.runtime.api.util.LazyValue.get(LazyValue.java:77)
+	at org.mule.tooling.client.internal.application.AbstractArtifact.getApplicationModel(AbstractArtifact.java:217)
+	at org.mule.tooling.client.internal.datasense.DataSenseArtifact.getToolingApplicationModel(DataSenseArtifact.java:88)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.internalResolveComponentDataSense(DefaultDataSenseService.java:168)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.resolveComponentDataSense(DefaultDataSenseService.java:118)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.invokeMethod(DefaultDataSenseService.java:287)
+	at jdk.internal.reflect.GeneratedMethodAccessor439.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mule.tooling.client.bootstrap.internal.reflection.Dispatcher$ToolingCallable.call(Dispatcher.java:241)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.mule.tooling.core 4 0 2022-02-17 20:33:10.277
+!MESSAGE Error while resolving metadata propagation
+!STACK 0
+org.mule.tooling.client.api.exception.ToolingException: Error while creating application model
+org.mule.runtime.api.exception.MuleRuntimeException: A reference error-handler cannot have on-errors.
+
+	at org.mule.tooling.client.internal.DefaultApplicationModelFactory.createApplicationModel(DefaultApplicationModelFactory.java:69)
+	at org.mule.tooling.client.internal.application.DefaultApplication.lambda$newToolingApplicationModelLazyValue$6(DefaultApplication.java:152)
+	at org.mule.runtime.api.util.LazyValue.get(LazyValue.java:77)
+	at org.mule.tooling.client.internal.application.AbstractArtifact.getApplicationModel(AbstractArtifact.java:217)
+	at org.mule.tooling.client.internal.datasense.DataSenseArtifact.getToolingApplicationModel(DataSenseArtifact.java:88)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.internalResolveDataSense(DefaultDataSenseService.java:135)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.resolveDataSense(DefaultDataSenseService.java:109)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.invokeMethod(DefaultDataSenseService.java:278)
+	at jdk.internal.reflect.GeneratedMethodAccessor439.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mule.tooling.client.bootstrap.internal.reflection.Dispatcher$ToolingCallable.call(Dispatcher.java:241)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.mule.tooling.core 4 0 2022-02-17 20:33:10.296
+!MESSAGE Error while resolving component datasense
+!STACK 0
+org.mule.tooling.client.api.exception.ToolingException: Error while creating application model
+org.mule.runtime.api.exception.MuleRuntimeException: A reference error-handler cannot have on-errors.
+
+	at org.mule.tooling.client.internal.DefaultApplicationModelFactory.createApplicationModel(DefaultApplicationModelFactory.java:69)
+	at org.mule.tooling.client.internal.application.DefaultApplication.lambda$newToolingApplicationModelLazyValue$6(DefaultApplication.java:152)
+	at org.mule.runtime.api.util.LazyValue.get(LazyValue.java:77)
+	at org.mule.tooling.client.internal.application.AbstractArtifact.getApplicationModel(AbstractArtifact.java:217)
+	at org.mule.tooling.client.internal.datasense.DataSenseArtifact.getToolingApplicationModel(DataSenseArtifact.java:88)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.internalResolveComponentDataSense(DefaultDataSenseService.java:168)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.resolveComponentDataSense(DefaultDataSenseService.java:118)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.invokeMethod(DefaultDataSenseService.java:287)
+	at jdk.internal.reflect.GeneratedMethodAccessor439.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mule.tooling.client.bootstrap.internal.reflection.Dispatcher$ToolingCallable.call(Dispatcher.java:241)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.mule.tooling.core 4 0 2022-02-17 20:33:11.384
+!MESSAGE Error while resolving metadata propagation
+!STACK 0
+org.mule.tooling.client.api.exception.ToolingException: Error while creating application model
+org.mule.runtime.api.exception.MuleRuntimeException: A reference error-handler cannot have on-errors.
+
+	at org.mule.tooling.client.internal.DefaultApplicationModelFactory.createApplicationModel(DefaultApplicationModelFactory.java:69)
+	at org.mule.tooling.client.internal.application.DefaultApplication.lambda$newToolingApplicationModelLazyValue$6(DefaultApplication.java:152)
+	at org.mule.runtime.api.util.LazyValue.get(LazyValue.java:77)
+	at org.mule.tooling.client.internal.application.AbstractArtifact.getApplicationModel(AbstractArtifact.java:217)
+	at org.mule.tooling.client.internal.datasense.DataSenseArtifact.getToolingApplicationModel(DataSenseArtifact.java:88)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.internalResolveDataSense(DefaultDataSenseService.java:135)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.resolveDataSense(DefaultDataSenseService.java:109)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.invokeMethod(DefaultDataSenseService.java:278)
+	at jdk.internal.reflect.GeneratedMethodAccessor439.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mule.tooling.client.bootstrap.internal.reflection.Dispatcher$ToolingCallable.call(Dispatcher.java:241)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.mule.tooling.core 4 0 2022-02-17 20:33:11.398
+!MESSAGE Error while resolving component datasense
+!STACK 0
+org.mule.tooling.client.api.exception.ToolingException: Error while creating application model
+org.mule.runtime.api.exception.MuleRuntimeException: A reference error-handler cannot have on-errors.
+
+	at org.mule.tooling.client.internal.DefaultApplicationModelFactory.createApplicationModel(DefaultApplicationModelFactory.java:69)
+	at org.mule.tooling.client.internal.application.DefaultApplication.lambda$newToolingApplicationModelLazyValue$6(DefaultApplication.java:152)
+	at org.mule.runtime.api.util.LazyValue.get(LazyValue.java:77)
+	at org.mule.tooling.client.internal.application.AbstractArtifact.getApplicationModel(AbstractArtifact.java:217)
+	at org.mule.tooling.client.internal.datasense.DataSenseArtifact.getToolingApplicationModel(DataSenseArtifact.java:88)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.internalResolveComponentDataSense(DefaultDataSenseService.java:168)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.resolveComponentDataSense(DefaultDataSenseService.java:118)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.invokeMethod(DefaultDataSenseService.java:287)
+	at jdk.internal.reflect.GeneratedMethodAccessor439.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mule.tooling.client.bootstrap.internal.reflection.Dispatcher$ToolingCallable.call(Dispatcher.java:241)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.mule.tooling.core 4 0 2022-02-17 20:33:13.182
+!MESSAGE Error while resolving metadata propagation
+!STACK 0
+org.mule.tooling.client.api.exception.ToolingException: Error while creating application model
+org.mule.runtime.api.exception.MuleRuntimeException: A reference error-handler cannot have on-errors.
+
+	at org.mule.tooling.client.internal.DefaultApplicationModelFactory.createApplicationModel(DefaultApplicationModelFactory.java:69)
+	at org.mule.tooling.client.internal.application.DefaultApplication.lambda$newToolingApplicationModelLazyValue$6(DefaultApplication.java:152)
+	at org.mule.runtime.api.util.LazyValue.get(LazyValue.java:77)
+	at org.mule.tooling.client.internal.application.AbstractArtifact.getApplicationModel(AbstractArtifact.java:217)
+	at org.mule.tooling.client.internal.datasense.DataSenseArtifact.getToolingApplicationModel(DataSenseArtifact.java:88)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.internalResolveDataSense(DefaultDataSenseService.java:135)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.resolveDataSense(DefaultDataSenseService.java:109)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.invokeMethod(DefaultDataSenseService.java:278)
+	at jdk.internal.reflect.GeneratedMethodAccessor439.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mule.tooling.client.bootstrap.internal.reflection.Dispatcher$ToolingCallable.call(Dispatcher.java:241)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.mule.tooling.core 4 0 2022-02-17 20:33:13.199
+!MESSAGE Error while resolving component datasense
+!STACK 0
+org.mule.tooling.client.api.exception.ToolingException: Error while creating application model
+org.mule.runtime.api.exception.MuleRuntimeException: A reference error-handler cannot have on-errors.
+
+	at org.mule.tooling.client.internal.DefaultApplicationModelFactory.createApplicationModel(DefaultApplicationModelFactory.java:69)
+	at org.mule.tooling.client.internal.application.DefaultApplication.lambda$newToolingApplicationModelLazyValue$6(DefaultApplication.java:152)
+	at org.mule.runtime.api.util.LazyValue.get(LazyValue.java:77)
+	at org.mule.tooling.client.internal.application.AbstractArtifact.getApplicationModel(AbstractArtifact.java:217)
+	at org.mule.tooling.client.internal.datasense.DataSenseArtifact.getToolingApplicationModel(DataSenseArtifact.java:88)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.internalResolveComponentDataSense(DefaultDataSenseService.java:168)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.resolveComponentDataSense(DefaultDataSenseService.java:118)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.invokeMethod(DefaultDataSenseService.java:287)
+	at jdk.internal.reflect.GeneratedMethodAccessor439.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mule.tooling.client.bootstrap.internal.reflection.Dispatcher$ToolingCallable.call(Dispatcher.java:241)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.mule.tooling.maven 1 0 2022-02-17 20:33:30.043
+!MESSAGE  *** 1306 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\apache-maven-3.8.1, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.core 4 0 2022-02-17 20:33:34.337
+!MESSAGE Error while resolving metadata propagation
+!STACK 0
+org.mule.tooling.client.api.exception.ToolingException: Error while creating application model
+org.mule.runtime.api.exception.MuleRuntimeException: A reference error-handler cannot have on-errors.
+
+	at org.mule.tooling.client.internal.DefaultApplicationModelFactory.createApplicationModel(DefaultApplicationModelFactory.java:69)
+	at org.mule.tooling.client.internal.application.DefaultApplication.lambda$newToolingApplicationModelLazyValue$6(DefaultApplication.java:152)
+	at org.mule.runtime.api.util.LazyValue.get(LazyValue.java:77)
+	at org.mule.tooling.client.internal.application.AbstractArtifact.getApplicationModel(AbstractArtifact.java:217)
+	at org.mule.tooling.client.internal.datasense.DataSenseArtifact.getToolingApplicationModel(DataSenseArtifact.java:88)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.internalResolveDataSense(DefaultDataSenseService.java:135)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.resolveDataSense(DefaultDataSenseService.java:109)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.invokeMethod(DefaultDataSenseService.java:278)
+	at jdk.internal.reflect.GeneratedMethodAccessor439.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mule.tooling.client.bootstrap.internal.reflection.Dispatcher$ToolingCallable.call(Dispatcher.java:241)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.mule.tooling.core 4 0 2022-02-17 20:33:34.351
+!MESSAGE Error while resolving component datasense
+!STACK 0
+org.mule.tooling.client.api.exception.ToolingException: Error while creating application model
+org.mule.runtime.api.exception.MuleRuntimeException: A reference error-handler cannot have on-errors.
+
+	at org.mule.tooling.client.internal.DefaultApplicationModelFactory.createApplicationModel(DefaultApplicationModelFactory.java:69)
+	at org.mule.tooling.client.internal.application.DefaultApplication.lambda$newToolingApplicationModelLazyValue$6(DefaultApplication.java:152)
+	at org.mule.runtime.api.util.LazyValue.get(LazyValue.java:77)
+	at org.mule.tooling.client.internal.application.AbstractArtifact.getApplicationModel(AbstractArtifact.java:217)
+	at org.mule.tooling.client.internal.datasense.DataSenseArtifact.getToolingApplicationModel(DataSenseArtifact.java:88)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.internalResolveComponentDataSense(DefaultDataSenseService.java:168)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.resolveComponentDataSense(DefaultDataSenseService.java:118)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.invokeMethod(DefaultDataSenseService.java:287)
+	at jdk.internal.reflect.GeneratedMethodAccessor439.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mule.tooling.client.bootstrap.internal.reflection.Dispatcher$ToolingCallable.call(Dispatcher.java:241)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.mule.tooling.core 4 0 2022-02-17 20:33:40.387
+!MESSAGE Error while resolving metadata propagation
+!STACK 0
+org.mule.tooling.client.api.exception.ToolingException: Error while creating application model
+org.mule.runtime.api.exception.MuleRuntimeException: A reference error-handler cannot have on-errors.
+
+	at org.mule.tooling.client.internal.DefaultApplicationModelFactory.createApplicationModel(DefaultApplicationModelFactory.java:69)
+	at org.mule.tooling.client.internal.application.DefaultApplication.lambda$newToolingApplicationModelLazyValue$6(DefaultApplication.java:152)
+	at org.mule.runtime.api.util.LazyValue.get(LazyValue.java:77)
+	at org.mule.tooling.client.internal.application.AbstractArtifact.getApplicationModel(AbstractArtifact.java:217)
+	at org.mule.tooling.client.internal.datasense.DataSenseArtifact.getToolingApplicationModel(DataSenseArtifact.java:88)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.internalResolveDataSense(DefaultDataSenseService.java:135)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.resolveDataSense(DefaultDataSenseService.java:109)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.invokeMethod(DefaultDataSenseService.java:278)
+	at jdk.internal.reflect.GeneratedMethodAccessor439.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mule.tooling.client.bootstrap.internal.reflection.Dispatcher$ToolingCallable.call(Dispatcher.java:241)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.mule.tooling.core 4 0 2022-02-17 20:33:40.403
+!MESSAGE Error while resolving component datasense
+!STACK 0
+org.mule.tooling.client.api.exception.ToolingException: Error while creating application model
+org.mule.runtime.api.exception.MuleRuntimeException: A reference error-handler cannot have on-errors.
+
+	at org.mule.tooling.client.internal.DefaultApplicationModelFactory.createApplicationModel(DefaultApplicationModelFactory.java:69)
+	at org.mule.tooling.client.internal.application.DefaultApplication.lambda$newToolingApplicationModelLazyValue$6(DefaultApplication.java:152)
+	at org.mule.runtime.api.util.LazyValue.get(LazyValue.java:77)
+	at org.mule.tooling.client.internal.application.AbstractArtifact.getApplicationModel(AbstractArtifact.java:217)
+	at org.mule.tooling.client.internal.datasense.DataSenseArtifact.getToolingApplicationModel(DataSenseArtifact.java:88)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.internalResolveComponentDataSense(DefaultDataSenseService.java:168)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.resolveComponentDataSense(DefaultDataSenseService.java:118)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.invokeMethod(DefaultDataSenseService.java:287)
+	at jdk.internal.reflect.GeneratedMethodAccessor439.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mule.tooling.client.bootstrap.internal.reflection.Dispatcher$ToolingCallable.call(Dispatcher.java:241)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.mule.tooling.core 4 0 2022-02-17 20:33:49.320
+!MESSAGE Error while resolving metadata propagation
+!STACK 0
+org.mule.tooling.client.api.exception.ToolingException: Error while creating application model
+org.mule.runtime.api.exception.MuleRuntimeException: A reference error-handler cannot have on-errors.
+
+	at org.mule.tooling.client.internal.DefaultApplicationModelFactory.createApplicationModel(DefaultApplicationModelFactory.java:69)
+	at org.mule.tooling.client.internal.application.DefaultApplication.lambda$newToolingApplicationModelLazyValue$6(DefaultApplication.java:152)
+	at org.mule.runtime.api.util.LazyValue.get(LazyValue.java:77)
+	at org.mule.tooling.client.internal.application.AbstractArtifact.getApplicationModel(AbstractArtifact.java:217)
+	at org.mule.tooling.client.internal.datasense.DataSenseArtifact.getToolingApplicationModel(DataSenseArtifact.java:88)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.internalResolveDataSense(DefaultDataSenseService.java:135)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.resolveDataSense(DefaultDataSenseService.java:109)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.invokeMethod(DefaultDataSenseService.java:278)
+	at jdk.internal.reflect.GeneratedMethodAccessor439.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mule.tooling.client.bootstrap.internal.reflection.Dispatcher$ToolingCallable.call(Dispatcher.java:241)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.mule.tooling.core 4 0 2022-02-17 20:33:49.343
+!MESSAGE Error while resolving component datasense
+!STACK 0
+org.mule.tooling.client.api.exception.ToolingException: Error while creating application model
+org.mule.runtime.api.exception.MuleRuntimeException: A reference error-handler cannot have on-errors.
+
+	at org.mule.tooling.client.internal.DefaultApplicationModelFactory.createApplicationModel(DefaultApplicationModelFactory.java:69)
+	at org.mule.tooling.client.internal.application.DefaultApplication.lambda$newToolingApplicationModelLazyValue$6(DefaultApplication.java:152)
+	at org.mule.runtime.api.util.LazyValue.get(LazyValue.java:77)
+	at org.mule.tooling.client.internal.application.AbstractArtifact.getApplicationModel(AbstractArtifact.java:217)
+	at org.mule.tooling.client.internal.datasense.DataSenseArtifact.getToolingApplicationModel(DataSenseArtifact.java:88)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.internalResolveComponentDataSense(DefaultDataSenseService.java:168)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.resolveComponentDataSense(DefaultDataSenseService.java:118)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.invokeMethod(DefaultDataSenseService.java:287)
+	at jdk.internal.reflect.GeneratedMethodAccessor439.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mule.tooling.client.bootstrap.internal.reflection.Dispatcher$ToolingCallable.call(Dispatcher.java:241)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.mule.tooling.core 4 0 2022-02-17 20:33:50.632
+!MESSAGE Error while resolving metadata propagation
+!STACK 0
+org.mule.tooling.client.api.exception.ToolingException: Error while creating application model
+org.mule.runtime.api.exception.MuleRuntimeException: A reference error-handler cannot have on-errors.
+
+	at org.mule.tooling.client.internal.DefaultApplicationModelFactory.createApplicationModel(DefaultApplicationModelFactory.java:69)
+	at org.mule.tooling.client.internal.application.DefaultApplication.lambda$newToolingApplicationModelLazyValue$6(DefaultApplication.java:152)
+	at org.mule.runtime.api.util.LazyValue.get(LazyValue.java:77)
+	at org.mule.tooling.client.internal.application.AbstractArtifact.getApplicationModel(AbstractArtifact.java:217)
+	at org.mule.tooling.client.internal.datasense.DataSenseArtifact.getToolingApplicationModel(DataSenseArtifact.java:88)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.internalResolveDataSense(DefaultDataSenseService.java:135)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.resolveDataSense(DefaultDataSenseService.java:109)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.invokeMethod(DefaultDataSenseService.java:278)
+	at jdk.internal.reflect.GeneratedMethodAccessor439.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mule.tooling.client.bootstrap.internal.reflection.Dispatcher$ToolingCallable.call(Dispatcher.java:241)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.mule.tooling.core 4 0 2022-02-17 20:33:50.647
+!MESSAGE Error while resolving component datasense
+!STACK 0
+org.mule.tooling.client.api.exception.ToolingException: Error while creating application model
+org.mule.runtime.api.exception.MuleRuntimeException: A reference error-handler cannot have on-errors.
+
+	at org.mule.tooling.client.internal.DefaultApplicationModelFactory.createApplicationModel(DefaultApplicationModelFactory.java:69)
+	at org.mule.tooling.client.internal.application.DefaultApplication.lambda$newToolingApplicationModelLazyValue$6(DefaultApplication.java:152)
+	at org.mule.runtime.api.util.LazyValue.get(LazyValue.java:77)
+	at org.mule.tooling.client.internal.application.AbstractArtifact.getApplicationModel(AbstractArtifact.java:217)
+	at org.mule.tooling.client.internal.datasense.DataSenseArtifact.getToolingApplicationModel(DataSenseArtifact.java:88)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.internalResolveComponentDataSense(DefaultDataSenseService.java:168)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.resolveComponentDataSense(DefaultDataSenseService.java:118)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.invokeMethod(DefaultDataSenseService.java:287)
+	at jdk.internal.reflect.GeneratedMethodAccessor439.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mule.tooling.client.bootstrap.internal.reflection.Dispatcher$ToolingCallable.call(Dispatcher.java:241)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.mule.tooling.core 4 0 2022-02-17 20:33:52.360
+!MESSAGE Error while resolving metadata propagation
+!STACK 0
+org.mule.tooling.client.api.exception.ToolingException: Error while creating application model
+org.mule.runtime.api.exception.MuleRuntimeException: A reference error-handler cannot have on-errors.
+
+	at org.mule.tooling.client.internal.DefaultApplicationModelFactory.createApplicationModel(DefaultApplicationModelFactory.java:69)
+	at org.mule.tooling.client.internal.application.DefaultApplication.lambda$newToolingApplicationModelLazyValue$6(DefaultApplication.java:152)
+	at org.mule.runtime.api.util.LazyValue.get(LazyValue.java:77)
+	at org.mule.tooling.client.internal.application.AbstractArtifact.getApplicationModel(AbstractArtifact.java:217)
+	at org.mule.tooling.client.internal.datasense.DataSenseArtifact.getToolingApplicationModel(DataSenseArtifact.java:88)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.internalResolveDataSense(DefaultDataSenseService.java:135)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.resolveDataSense(DefaultDataSenseService.java:109)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.invokeMethod(DefaultDataSenseService.java:278)
+	at jdk.internal.reflect.GeneratedMethodAccessor439.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mule.tooling.client.bootstrap.internal.reflection.Dispatcher$ToolingCallable.call(Dispatcher.java:241)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.mule.tooling.core 4 0 2022-02-17 20:33:52.394
+!MESSAGE Error while resolving component datasense
+!STACK 0
+org.mule.tooling.client.api.exception.ToolingException: Error while creating application model
+org.mule.runtime.api.exception.MuleRuntimeException: A reference error-handler cannot have on-errors.
+
+	at org.mule.tooling.client.internal.DefaultApplicationModelFactory.createApplicationModel(DefaultApplicationModelFactory.java:69)
+	at org.mule.tooling.client.internal.application.DefaultApplication.lambda$newToolingApplicationModelLazyValue$6(DefaultApplication.java:152)
+	at org.mule.runtime.api.util.LazyValue.get(LazyValue.java:77)
+	at org.mule.tooling.client.internal.application.AbstractArtifact.getApplicationModel(AbstractArtifact.java:217)
+	at org.mule.tooling.client.internal.datasense.DataSenseArtifact.getToolingApplicationModel(DataSenseArtifact.java:88)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.internalResolveComponentDataSense(DefaultDataSenseService.java:168)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.resolveComponentDataSense(DefaultDataSenseService.java:118)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.invokeMethod(DefaultDataSenseService.java:287)
+	at jdk.internal.reflect.GeneratedMethodAccessor439.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mule.tooling.client.bootstrap.internal.reflection.Dispatcher$ToolingCallable.call(Dispatcher.java:241)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.mule.tooling.core 4 0 2022-02-17 20:33:53.593
+!MESSAGE Error while resolving metadata propagation
+!STACK 0
+org.mule.tooling.client.api.exception.ToolingException: Error while creating application model
+org.mule.runtime.api.exception.MuleRuntimeException: A reference error-handler cannot have on-errors.
+
+	at org.mule.tooling.client.internal.DefaultApplicationModelFactory.createApplicationModel(DefaultApplicationModelFactory.java:69)
+	at org.mule.tooling.client.internal.application.DefaultApplication.lambda$newToolingApplicationModelLazyValue$6(DefaultApplication.java:152)
+	at org.mule.runtime.api.util.LazyValue.get(LazyValue.java:77)
+	at org.mule.tooling.client.internal.application.AbstractArtifact.getApplicationModel(AbstractArtifact.java:217)
+	at org.mule.tooling.client.internal.datasense.DataSenseArtifact.getToolingApplicationModel(DataSenseArtifact.java:88)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.internalResolveDataSense(DefaultDataSenseService.java:135)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.resolveDataSense(DefaultDataSenseService.java:109)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.invokeMethod(DefaultDataSenseService.java:278)
+	at jdk.internal.reflect.GeneratedMethodAccessor439.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mule.tooling.client.bootstrap.internal.reflection.Dispatcher$ToolingCallable.call(Dispatcher.java:241)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.mule.tooling.core 4 0 2022-02-17 20:33:53.609
+!MESSAGE Error while resolving component datasense
+!STACK 0
+org.mule.tooling.client.api.exception.ToolingException: Error while creating application model
+org.mule.runtime.api.exception.MuleRuntimeException: A reference error-handler cannot have on-errors.
+
+	at org.mule.tooling.client.internal.DefaultApplicationModelFactory.createApplicationModel(DefaultApplicationModelFactory.java:69)
+	at org.mule.tooling.client.internal.application.DefaultApplication.lambda$newToolingApplicationModelLazyValue$6(DefaultApplication.java:152)
+	at org.mule.runtime.api.util.LazyValue.get(LazyValue.java:77)
+	at org.mule.tooling.client.internal.application.AbstractArtifact.getApplicationModel(AbstractArtifact.java:217)
+	at org.mule.tooling.client.internal.datasense.DataSenseArtifact.getToolingApplicationModel(DataSenseArtifact.java:88)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.internalResolveComponentDataSense(DefaultDataSenseService.java:168)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.resolveComponentDataSense(DefaultDataSenseService.java:118)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.invokeMethod(DefaultDataSenseService.java:287)
+	at jdk.internal.reflect.GeneratedMethodAccessor439.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mule.tooling.client.bootstrap.internal.reflection.Dispatcher$ToolingCallable.call(Dispatcher.java:241)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.mule.tooling.core 4 0 2022-02-17 20:33:55.858
+!MESSAGE Error while resolving metadata propagation
+!STACK 0
+org.mule.tooling.client.api.exception.ToolingException: Error while creating application model
+org.mule.runtime.api.exception.MuleRuntimeException: A reference error-handler cannot have on-errors.
+
+	at org.mule.tooling.client.internal.DefaultApplicationModelFactory.createApplicationModel(DefaultApplicationModelFactory.java:69)
+	at org.mule.tooling.client.internal.application.DefaultApplication.lambda$newToolingApplicationModelLazyValue$6(DefaultApplication.java:152)
+	at org.mule.runtime.api.util.LazyValue.get(LazyValue.java:77)
+	at org.mule.tooling.client.internal.application.AbstractArtifact.getApplicationModel(AbstractArtifact.java:217)
+	at org.mule.tooling.client.internal.datasense.DataSenseArtifact.getToolingApplicationModel(DataSenseArtifact.java:88)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.internalResolveDataSense(DefaultDataSenseService.java:135)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.resolveDataSense(DefaultDataSenseService.java:109)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.invokeMethod(DefaultDataSenseService.java:278)
+	at jdk.internal.reflect.GeneratedMethodAccessor439.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mule.tooling.client.bootstrap.internal.reflection.Dispatcher$ToolingCallable.call(Dispatcher.java:241)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.mule.tooling.core 4 0 2022-02-17 20:33:55.872
+!MESSAGE Error while resolving component datasense
+!STACK 0
+org.mule.tooling.client.api.exception.ToolingException: Error while creating application model
+org.mule.runtime.api.exception.MuleRuntimeException: A reference error-handler cannot have on-errors.
+
+	at org.mule.tooling.client.internal.DefaultApplicationModelFactory.createApplicationModel(DefaultApplicationModelFactory.java:69)
+	at org.mule.tooling.client.internal.application.DefaultApplication.lambda$newToolingApplicationModelLazyValue$6(DefaultApplication.java:152)
+	at org.mule.runtime.api.util.LazyValue.get(LazyValue.java:77)
+	at org.mule.tooling.client.internal.application.AbstractArtifact.getApplicationModel(AbstractArtifact.java:217)
+	at org.mule.tooling.client.internal.datasense.DataSenseArtifact.getToolingApplicationModel(DataSenseArtifact.java:88)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.internalResolveComponentDataSense(DefaultDataSenseService.java:168)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.resolveComponentDataSense(DefaultDataSenseService.java:118)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.invokeMethod(DefaultDataSenseService.java:287)
+	at jdk.internal.reflect.GeneratedMethodAccessor439.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mule.tooling.client.bootstrap.internal.reflection.Dispatcher$ToolingCallable.call(Dispatcher.java:241)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.mule.tooling.core 4 0 2022-02-17 20:34:00.964
+!MESSAGE Error while resolving metadata propagation
+!STACK 0
+org.mule.tooling.client.api.exception.ToolingException: Error while creating application model
+org.mule.runtime.api.exception.MuleRuntimeException: A reference error-handler cannot have on-errors.
+
+	at org.mule.tooling.client.internal.DefaultApplicationModelFactory.createApplicationModel(DefaultApplicationModelFactory.java:69)
+	at org.mule.tooling.client.internal.application.DefaultApplication.lambda$newToolingApplicationModelLazyValue$6(DefaultApplication.java:152)
+	at org.mule.runtime.api.util.LazyValue.get(LazyValue.java:77)
+	at org.mule.tooling.client.internal.application.AbstractArtifact.getApplicationModel(AbstractArtifact.java:217)
+	at org.mule.tooling.client.internal.datasense.DataSenseArtifact.getToolingApplicationModel(DataSenseArtifact.java:88)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.internalResolveDataSense(DefaultDataSenseService.java:135)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.resolveDataSense(DefaultDataSenseService.java:109)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.invokeMethod(DefaultDataSenseService.java:278)
+	at jdk.internal.reflect.GeneratedMethodAccessor439.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mule.tooling.client.bootstrap.internal.reflection.Dispatcher$ToolingCallable.call(Dispatcher.java:241)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.mule.tooling.core 4 0 2022-02-17 20:34:00.979
+!MESSAGE Error while resolving component datasense
+!STACK 0
+org.mule.tooling.client.api.exception.ToolingException: Error while creating application model
+org.mule.runtime.api.exception.MuleRuntimeException: A reference error-handler cannot have on-errors.
+
+	at org.mule.tooling.client.internal.DefaultApplicationModelFactory.createApplicationModel(DefaultApplicationModelFactory.java:69)
+	at org.mule.tooling.client.internal.application.DefaultApplication.lambda$newToolingApplicationModelLazyValue$6(DefaultApplication.java:152)
+	at org.mule.runtime.api.util.LazyValue.get(LazyValue.java:77)
+	at org.mule.tooling.client.internal.application.AbstractArtifact.getApplicationModel(AbstractArtifact.java:217)
+	at org.mule.tooling.client.internal.datasense.DataSenseArtifact.getToolingApplicationModel(DataSenseArtifact.java:88)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.internalResolveComponentDataSense(DefaultDataSenseService.java:168)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.resolveComponentDataSense(DefaultDataSenseService.java:118)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.invokeMethod(DefaultDataSenseService.java:287)
+	at jdk.internal.reflect.GeneratedMethodAccessor439.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mule.tooling.client.bootstrap.internal.reflection.Dispatcher$ToolingCallable.call(Dispatcher.java:241)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.mule.tooling.core 4 0 2022-02-17 20:34:02.728
+!MESSAGE Error while resolving metadata propagation
+!STACK 0
+org.mule.tooling.client.api.exception.ToolingException: Error while creating application model
+org.mule.runtime.api.exception.MuleRuntimeException: A reference error-handler cannot have on-errors.
+
+	at org.mule.tooling.client.internal.DefaultApplicationModelFactory.createApplicationModel(DefaultApplicationModelFactory.java:69)
+	at org.mule.tooling.client.internal.application.DefaultApplication.lambda$newToolingApplicationModelLazyValue$6(DefaultApplication.java:152)
+	at org.mule.runtime.api.util.LazyValue.get(LazyValue.java:77)
+	at org.mule.tooling.client.internal.application.AbstractArtifact.getApplicationModel(AbstractArtifact.java:217)
+	at org.mule.tooling.client.internal.datasense.DataSenseArtifact.getToolingApplicationModel(DataSenseArtifact.java:88)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.internalResolveDataSense(DefaultDataSenseService.java:135)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.resolveDataSense(DefaultDataSenseService.java:109)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.invokeMethod(DefaultDataSenseService.java:278)
+	at jdk.internal.reflect.GeneratedMethodAccessor439.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mule.tooling.client.bootstrap.internal.reflection.Dispatcher$ToolingCallable.call(Dispatcher.java:241)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.mule.tooling.core 4 0 2022-02-17 20:34:02.743
+!MESSAGE Error while resolving component datasense
+!STACK 0
+org.mule.tooling.client.api.exception.ToolingException: Error while creating application model
+org.mule.runtime.api.exception.MuleRuntimeException: A reference error-handler cannot have on-errors.
+
+	at org.mule.tooling.client.internal.DefaultApplicationModelFactory.createApplicationModel(DefaultApplicationModelFactory.java:69)
+	at org.mule.tooling.client.internal.application.DefaultApplication.lambda$newToolingApplicationModelLazyValue$6(DefaultApplication.java:152)
+	at org.mule.runtime.api.util.LazyValue.get(LazyValue.java:77)
+	at org.mule.tooling.client.internal.application.AbstractArtifact.getApplicationModel(AbstractArtifact.java:217)
+	at org.mule.tooling.client.internal.datasense.DataSenseArtifact.getToolingApplicationModel(DataSenseArtifact.java:88)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.internalResolveComponentDataSense(DefaultDataSenseService.java:168)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.resolveComponentDataSense(DefaultDataSenseService.java:118)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.invokeMethod(DefaultDataSenseService.java:287)
+	at jdk.internal.reflect.GeneratedMethodAccessor439.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mule.tooling.client.bootstrap.internal.reflection.Dispatcher$ToolingCallable.call(Dispatcher.java:241)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.mule.tooling.maven 1 0 2022-02-17 20:34:08.313
+!MESSAGE  *** 1419 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\apache-maven-3.8.1, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.runtime 1 0 2022-02-17 20:34:20.650
+!MESSAGE Starting shell termination command "[taskkill, /F, /PID, 5292]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2022-02-17 20:34:20.651
+!MESSAGE Finished shell termination command "[taskkill, /F, /PID, 5292]"
+
+!ENTRY org.mule.tooling.runtime 2 0 2022-02-17 20:34:20.711
+!MESSAGE Termination command ShellTerminationCommand [getTerminationCommand()=[taskkill, /F, /PID, 5292]] indicate retry action is necessary, moving on to next one
+
+!ENTRY org.mule.tooling.runtime 1 0 2022-02-17 20:34:20.711
+!MESSAGE Starting shell termination command "[taskkill, /F, /PID, 15104]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2022-02-17 20:34:20.712
+!MESSAGE Finished shell termination command "[taskkill, /F, /PID, 15104]"
+
+!ENTRY org.mule.tooling.runtime 2 0 2022-02-17 20:34:20.770
+!MESSAGE Termination command ShellTerminationCommand [getTerminationCommand()=[taskkill, /F, /PID, 15104]] indicate retry action is necessary, moving on to next one
+
+!ENTRY org.mule.tooling.core 4 0 2022-02-17 20:34:24.198
+!MESSAGE Error while resolving metadata propagation
+!STACK 0
+org.mule.tooling.client.api.exception.ToolingException: Error while creating application model
+org.mule.runtime.api.exception.MuleRuntimeException: A reference error-handler cannot have on-errors.
+
+	at org.mule.tooling.client.internal.DefaultApplicationModelFactory.createApplicationModel(DefaultApplicationModelFactory.java:69)
+	at org.mule.tooling.client.internal.application.DefaultApplication.lambda$newToolingApplicationModelLazyValue$6(DefaultApplication.java:152)
+	at org.mule.runtime.api.util.LazyValue.get(LazyValue.java:77)
+	at org.mule.tooling.client.internal.application.AbstractArtifact.getApplicationModel(AbstractArtifact.java:217)
+	at org.mule.tooling.client.internal.datasense.DataSenseArtifact.getToolingApplicationModel(DataSenseArtifact.java:88)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.internalResolveDataSense(DefaultDataSenseService.java:135)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.resolveDataSense(DefaultDataSenseService.java:109)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.invokeMethod(DefaultDataSenseService.java:278)
+	at jdk.internal.reflect.GeneratedMethodAccessor439.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mule.tooling.client.bootstrap.internal.reflection.Dispatcher$ToolingCallable.call(Dispatcher.java:241)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.mule.tooling.core 4 0 2022-02-17 20:34:24.215
+!MESSAGE Error while resolving component datasense
+!STACK 0
+org.mule.tooling.client.api.exception.ToolingException: Error while creating application model
+org.mule.runtime.api.exception.MuleRuntimeException: A reference error-handler cannot have on-errors.
+
+	at org.mule.tooling.client.internal.DefaultApplicationModelFactory.createApplicationModel(DefaultApplicationModelFactory.java:69)
+	at org.mule.tooling.client.internal.application.DefaultApplication.lambda$newToolingApplicationModelLazyValue$6(DefaultApplication.java:152)
+	at org.mule.runtime.api.util.LazyValue.get(LazyValue.java:77)
+	at org.mule.tooling.client.internal.application.AbstractArtifact.getApplicationModel(AbstractArtifact.java:217)
+	at org.mule.tooling.client.internal.datasense.DataSenseArtifact.getToolingApplicationModel(DataSenseArtifact.java:88)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.internalResolveComponentDataSense(DefaultDataSenseService.java:168)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.resolveComponentDataSense(DefaultDataSenseService.java:118)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.invokeMethod(DefaultDataSenseService.java:287)
+	at jdk.internal.reflect.GeneratedMethodAccessor439.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mule.tooling.client.bootstrap.internal.reflection.Dispatcher$ToolingCallable.call(Dispatcher.java:241)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.mule.tooling.core 4 0 2022-02-17 20:34:26.048
+!MESSAGE Error while resolving metadata propagation
+!STACK 0
+org.mule.tooling.client.api.exception.ToolingException: Error while creating application model
+org.mule.runtime.api.exception.MuleRuntimeException: A reference error-handler cannot have on-errors.
+
+	at org.mule.tooling.client.internal.DefaultApplicationModelFactory.createApplicationModel(DefaultApplicationModelFactory.java:69)
+	at org.mule.tooling.client.internal.application.DefaultApplication.lambda$newToolingApplicationModelLazyValue$6(DefaultApplication.java:152)
+	at org.mule.runtime.api.util.LazyValue.get(LazyValue.java:77)
+	at org.mule.tooling.client.internal.application.AbstractArtifact.getApplicationModel(AbstractArtifact.java:217)
+	at org.mule.tooling.client.internal.datasense.DataSenseArtifact.getToolingApplicationModel(DataSenseArtifact.java:88)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.internalResolveDataSense(DefaultDataSenseService.java:135)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.resolveDataSense(DefaultDataSenseService.java:109)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.invokeMethod(DefaultDataSenseService.java:278)
+	at jdk.internal.reflect.GeneratedMethodAccessor439.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mule.tooling.client.bootstrap.internal.reflection.Dispatcher$ToolingCallable.call(Dispatcher.java:241)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.mule.tooling.core 4 0 2022-02-17 20:34:26.063
+!MESSAGE Error while resolving component datasense
+!STACK 0
+org.mule.tooling.client.api.exception.ToolingException: Error while creating application model
+org.mule.runtime.api.exception.MuleRuntimeException: A reference error-handler cannot have on-errors.
+
+	at org.mule.tooling.client.internal.DefaultApplicationModelFactory.createApplicationModel(DefaultApplicationModelFactory.java:69)
+	at org.mule.tooling.client.internal.application.DefaultApplication.lambda$newToolingApplicationModelLazyValue$6(DefaultApplication.java:152)
+	at org.mule.runtime.api.util.LazyValue.get(LazyValue.java:77)
+	at org.mule.tooling.client.internal.application.AbstractArtifact.getApplicationModel(AbstractArtifact.java:217)
+	at org.mule.tooling.client.internal.datasense.DataSenseArtifact.getToolingApplicationModel(DataSenseArtifact.java:88)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.internalResolveComponentDataSense(DefaultDataSenseService.java:168)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.resolveComponentDataSense(DefaultDataSenseService.java:118)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.invokeMethod(DefaultDataSenseService.java:287)
+	at jdk.internal.reflect.GeneratedMethodAccessor439.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mule.tooling.client.bootstrap.internal.reflection.Dispatcher$ToolingCallable.call(Dispatcher.java:241)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.mule.tooling.maven 1 0 2022-02-17 20:34:34.646
+!MESSAGE  *** 2712 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\apache-maven-3.8.1, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.core 4 0 2022-02-17 20:35:57.394
+!MESSAGE Error while resolving metadata propagation
+!STACK 0
+org.mule.tooling.client.api.exception.ToolingException: Error while creating application model
+org.mule.runtime.api.exception.MuleRuntimeException: A reference error-handler cannot have on-errors.
+
+	at org.mule.tooling.client.internal.DefaultApplicationModelFactory.createApplicationModel(DefaultApplicationModelFactory.java:69)
+	at org.mule.tooling.client.internal.application.DefaultApplication.lambda$newToolingApplicationModelLazyValue$6(DefaultApplication.java:152)
+	at org.mule.runtime.api.util.LazyValue.get(LazyValue.java:77)
+	at org.mule.tooling.client.internal.application.AbstractArtifact.getApplicationModel(AbstractArtifact.java:217)
+	at org.mule.tooling.client.internal.datasense.DataSenseArtifact.getToolingApplicationModel(DataSenseArtifact.java:88)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.internalResolveDataSense(DefaultDataSenseService.java:135)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.resolveDataSense(DefaultDataSenseService.java:109)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.invokeMethod(DefaultDataSenseService.java:278)
+	at jdk.internal.reflect.GeneratedMethodAccessor439.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mule.tooling.client.bootstrap.internal.reflection.Dispatcher$ToolingCallable.call(Dispatcher.java:241)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.mule.tooling.core 4 0 2022-02-17 20:35:57.410
+!MESSAGE Error while resolving component datasense
+!STACK 0
+org.mule.tooling.client.api.exception.ToolingException: Error while creating application model
+org.mule.runtime.api.exception.MuleRuntimeException: A reference error-handler cannot have on-errors.
+
+	at org.mule.tooling.client.internal.DefaultApplicationModelFactory.createApplicationModel(DefaultApplicationModelFactory.java:69)
+	at org.mule.tooling.client.internal.application.DefaultApplication.lambda$newToolingApplicationModelLazyValue$6(DefaultApplication.java:152)
+	at org.mule.runtime.api.util.LazyValue.get(LazyValue.java:77)
+	at org.mule.tooling.client.internal.application.AbstractArtifact.getApplicationModel(AbstractArtifact.java:217)
+	at org.mule.tooling.client.internal.datasense.DataSenseArtifact.getToolingApplicationModel(DataSenseArtifact.java:88)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.internalResolveComponentDataSense(DefaultDataSenseService.java:168)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.resolveComponentDataSense(DefaultDataSenseService.java:118)
+	at org.mule.tooling.client.internal.DefaultDataSenseService.invokeMethod(DefaultDataSenseService.java:287)
+	at jdk.internal.reflect.GeneratedMethodAccessor439.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mule.tooling.client.bootstrap.internal.reflection.Dispatcher$ToolingCallable.call(Dispatcher.java:241)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.mule.tooling.maven 1 0 2022-02-17 20:36:01.470
+!MESSAGE  *** 1429 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\apache-maven-3.8.1, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.runtime 1 0 2022-02-17 20:36:25.926
+!MESSAGE Starting shell termination command "[taskkill, /F, /PID, 10236]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2022-02-17 20:36:25.927
+!MESSAGE Finished shell termination command "[taskkill, /F, /PID, 10236]"
+
+!ENTRY org.mule.tooling.runtime 2 0 2022-02-17 20:36:25.986
+!MESSAGE Termination command ShellTerminationCommand [getTerminationCommand()=[taskkill, /F, /PID, 10236]] indicate retry action is necessary, moving on to next one
+
+!ENTRY org.mule.tooling.runtime 1 0 2022-02-17 20:36:25.986
+!MESSAGE Starting shell termination command "[taskkill, /F, /PID, 14984]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2022-02-17 20:36:25.987
+!MESSAGE Finished shell termination command "[taskkill, /F, /PID, 14984]"
+
+!ENTRY org.mule.tooling.runtime 2 0 2022-02-17 20:36:26.040
+!MESSAGE Termination command ShellTerminationCommand [getTerminationCommand()=[taskkill, /F, /PID, 14984]] indicate retry action is necessary, moving on to next one
+
+!ENTRY org.mule.tooling.maven 1 0 2022-02-17 20:36:37.389
+!MESSAGE  *** 2453 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\apache-maven-3.8.1, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.maven 1 0 2022-02-17 20:38:13.910
+!MESSAGE  *** 1406 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\apache-maven-3.8.1, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.maven 1 0 2022-02-17 20:38:56.276
+!MESSAGE  *** 1422 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\apache-maven-3.8.1, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.maven 1 0 2022-02-17 20:39:13.294
+!MESSAGE  *** 1486 EmbeddedMavenRunner [configuration=DefaultMavenRunnerConfiguration [externalInstallation=false, mavenInstallationHome=null, mavenOpts=]]
+
+!ENTRY org.mule.tooling.maven 1 0 2022-02-17 20:46:04.406
+!MESSAGE  *** 1383 EmbeddedMavenRunner [configuration=DefaultMavenRunnerConfiguration [externalInstallation=false, mavenInstallationHome=null, mavenOpts=]]
+
+!ENTRY org.mule.tooling.runtime 1 0 2022-02-17 20:47:25.294
+!MESSAGE Starting shell termination command "[taskkill, /F, /PID, 6968]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2022-02-17 20:47:25.295
+!MESSAGE Finished shell termination command "[taskkill, /F, /PID, 6968]"
+
+!ENTRY org.mule.tooling.runtime 2 0 2022-02-17 20:47:25.359
+!MESSAGE Termination command ShellTerminationCommand [getTerminationCommand()=[taskkill, /F, /PID, 6968]] indicate retry action is necessary, moving on to next one
+
+!ENTRY org.mule.tooling.runtime 1 0 2022-02-17 20:47:25.359
+!MESSAGE Starting shell termination command "[taskkill, /F, /PID, 14348]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2022-02-17 20:47:25.360
+!MESSAGE Finished shell termination command "[taskkill, /F, /PID, 14348]"
+
+!ENTRY org.mule.tooling.runtime 2 0 2022-02-17 20:47:25.417
+!MESSAGE Termination command ShellTerminationCommand [getTerminationCommand()=[taskkill, /F, /PID, 14348]] indicate retry action is necessary, moving on to next one
+
+!ENTRY org.mule.tooling.maven 1 0 2022-02-17 20:47:28.326
+!MESSAGE  *** 2824 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\apache-maven-3.8.1, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.maven 1 0 2022-02-17 20:47:31.125
+!MESSAGE  *** 2752 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\apache-maven-3.8.1, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.maven 1 0 2022-02-17 20:47:33.585
+!MESSAGE  *** 2413 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\apache-maven-3.8.1, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.core 2 0 2022-02-17 20:51:20.355
+!MESSAGE Couldn't parse DW script as KeyValue pairs
+
+!ENTRY org.mule.tooling.maven 1 0 2022-02-17 20:51:46.303
+!MESSAGE  *** 1512 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\apache-maven-3.8.1, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.maven 1 0 2022-02-17 20:53:02.334
+!MESSAGE  *** 1476 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\apache-maven-3.8.1, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.maven 1 0 2022-02-17 20:54:11.434
+!MESSAGE  *** 1456 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\apache-maven-3.8.1, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.maven 1 0 2022-02-17 20:55:31.158
+!MESSAGE  *** 1467 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\apache-maven-3.8.1, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.maven 1 0 2022-02-17 20:55:39.206
+!MESSAGE  *** 1376 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\apache-maven-3.8.1, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.maven 1 0 2022-02-17 20:57:15.136
+!MESSAGE  *** 1529 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\apache-maven-3.8.1, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.maven 1 0 2022-02-17 20:57:24.726
+!MESSAGE  *** 1496 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\apache-maven-3.8.1, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.maven 1 0 2022-02-17 20:57:36.255
+!MESSAGE  *** 1349 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\apache-maven-3.8.1, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.runtime 1 0 2022-02-17 20:58:24.080
+!MESSAGE Starting shell termination command "[taskkill, /F, /PID, 13840]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2022-02-17 20:58:24.081
+!MESSAGE Finished shell termination command "[taskkill, /F, /PID, 13840]"
+
+!ENTRY org.mule.tooling.runtime 2 0 2022-02-17 20:58:24.138
+!MESSAGE Termination command ShellTerminationCommand [getTerminationCommand()=[taskkill, /F, /PID, 13840]] indicate retry action is necessary, moving on to next one
+
+!ENTRY org.mule.tooling.runtime 1 0 2022-02-17 20:58:24.138
+!MESSAGE Starting shell termination command "[taskkill, /F, /PID, 6844]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2022-02-17 20:58:24.139
+!MESSAGE Finished shell termination command "[taskkill, /F, /PID, 6844]"
+
+!ENTRY org.mule.tooling.runtime 2 0 2022-02-17 20:58:24.196
+!MESSAGE Termination command ShellTerminationCommand [getTerminationCommand()=[taskkill, /F, /PID, 6844]] indicate retry action is necessary, moving on to next one
+
+!ENTRY org.mule.tooling.maven 1 0 2022-02-17 20:58:38.006
+!MESSAGE  *** 2795 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\apache-maven-3.8.1, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.maven 1 0 2022-02-17 20:58:40.617
+!MESSAGE  *** 2557 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\apache-maven-3.8.1, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.maven 1 0 2022-02-17 20:58:43.616
+!MESSAGE  *** 2954 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\apache-maven-3.8.1, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.maven 1 0 2022-02-17 20:59:29.031
+!MESSAGE  *** 1364 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\apache-maven-3.8.1, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.ui.contribution.munit 1 1 2022-02-17 21:07:40.678
+!MESSAGE Deleting MUnit temporary folder in C:\Users\DNT\AppData\Local\Temp\munit-temp-dir
+
+!ENTRY org.eclipse.debug.core 4 125 2022-02-17 21:07:40.812
+!MESSAGE Error logged from Debug Core: 
+!STACK 1
+org.eclipse.debug.core.DebugException: Terminate failed
+	at org.eclipse.debug.core.Launch.terminate(Launch.java:298)
+	at org.eclipse.debug.internal.core.LaunchManager.shutdown(LaunchManager.java:2331)
+	at org.eclipse.debug.core.DebugPlugin.stop(DebugPlugin.java:676)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:871)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:863)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:1025)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:370)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:660)
+	at org.eclipse.osgi.container.Module.stop(Module.java:521)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1886)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1761)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:275)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:202)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:660)
+	at org.eclipse.osgi.container.Module.stop(Module.java:521)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:207)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:220)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+!SUBENTRY 1 org.eclipse.debug.core 4 5010 2022-02-17 21:07:40.813
+!MESSAGE Terminate failed

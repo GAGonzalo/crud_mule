@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+    <flow name="get:\personas:personas-config">
+        <ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+            <ee:message>
+                <ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+{
+  personas: [
+    {
+      id: 1,
+      nombre: "Juan",
+      apellido: "Perez",
+      telefono: "+543424054875",
+      pais: "Argentina",
+      provincia: "Santa Fe",
+      ciudad: "Santa Fe",
+      cod_postal: "3000",
+      calle: "Bv. Galvez",
+      numero: "2432"
+    }, 
+    {
+      id: 2,
+      nombre: "Hernan",
+      apellido: "Santo",
+      telefono: "+54114054875",
+      pais: "Argentina",
+      provincia: "Buenos Aires",
+      ciudad: "Campana",
+      cod_postal: "2804",
+      calle: "Uruguay",
+      numero: "1100"
+    }
+  ]
+}]]></ee:set-payload>
+            </ee:message>
+        </ee:transform>
+    </flow>
+	<flow name="get:\personas\(id):personas-config">
+        <ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core">
+            <ee:variables>
+                <ee:set-variable variableName="id"><![CDATA[attributes.uriParams.'id' as Number]]></ee:set-variable>
+            </ee:variables>
+        </ee:transform>
+        <ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+            <ee:message>
+                <ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+{
+  id: 2,
+  nombre: "Hernan",
+  apellido: "Santo",
+  telefono: "+54114054875",
+  pais: "Argentina",
+  provincia: "Buenos Aires",
+  ciudad: "Campana",
+  cod_postal: "2804",
+  calle: "Uruguay",
+  numero: "1100"
+}]]></ee:set-payload>
+            </ee:message>
+        </ee:transform>
+		<error-handler ref="general_error_handler" />
+    
+</flow>
+	<flow name="post:\personas:application\json:personas-config">
+        <ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+            <ee:message>
+                <ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+{
+  message: "Persona creada correctamente."
+}]]></ee:set-payload>
+            </ee:message>
+        </ee:transform>
+		<error-handler ref="general_error_handler" />
+    
+</flow>
+	<flow name="patch:\personas\(id):application\json:personas-config">
+        <ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core">
+            <ee:variables>
+                <ee:set-variable variableName="id">attributes.uriParams.'id'</ee:set-variable>
+            </ee:variables>
+        </ee:transform>
+        <ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+            <ee:message>
+                <ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+{
+  message: "Datos actualizados correctamente."
+}]]></ee:set-payload>
+            </ee:message>
+        </ee:transform>
+		<error-handler ref="general_error_handler" />
+    
+</flow>
+	<flow name="delete:\personas\(id):personas-config">
+        <ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core">
+            <ee:variables>
+                <ee:set-variable variableName="id">attributes.uriParams.'id'</ee:set-variable>
+            </ee:variables>
+        </ee:transform>
+        <ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+            <ee:message>
+                <ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+{
+  message: "Persona eliminada correctamente."
+}]]></ee:set-payload>
+            </ee:message>
+        </ee:transform>
+		<error-handler ref="general_error_handler" />
+    
+</flow>
+</mule>

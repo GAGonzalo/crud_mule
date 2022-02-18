@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+    <http:request-config name="HTTP_Request_configuration" doc:name="HTTP Request configuration" doc:id="254e0580-1998-4a5d-a5d0-c5a42609f6aa" basePath="/system" >
+		<http:request-connection host="0.0.0.0" port="8083" />
+	</http:request-config>
+	<flow name="get:\personas:personas_papi-config">
+		<logger level="INFO" doc:name="" doc:id="0756347f-5815-4b8e-8a73-ba31781ca64e" message="START get/personas PROCESS"/>
+		<http:request method="GET" doc:name="REQUEST get/personas to SYSTEM API" doc:id="4a80a343-5809-4aae-bd8f-7184dc9be3d2" config-ref="HTTP_Request_configuration" path="/personas">
+			<http:query-params ><![CDATA[#[attributes.queryParams]]]></http:query-params>
+		</http:request>
+		<logger level="INFO" doc:name="" doc:id="da3bbc58-8565-401b-9077-2438509baff5" message="END get/personas PROCESS"/>
+
+    </flow>
+	<flow name="get:\personas\(id):personas_papi-config">
+		<logger level="INFO" doc:name="" doc:id="7d40515a-6fb5-4727-a6ed-6f7a50645e23" message="END get/personas PROCESS" />
+		<http:request method="GET" doc:name="REQUEST get personas/{id} to SYSTEM API" doc:id="59913ee3-2f19-4b31-815a-a3573086779a" config-ref="HTTP_Request_configuration" path="/personas">
+			<http:uri-params ><![CDATA[#[attributes.uriParams]]]></http:uri-params>
+		</http:request>
+		<logger level="INFO" doc:name="" doc:id="ccc2a3a8-1ceb-41ef-a70c-03cf38f6c242" message="START get/personas PROCESS" />
+
+    </flow>
+	<flow name="post:\personas:application\json:personas_papi-config">
+		<logger level="INFO" doc:name="" doc:id="c8d904f8-c94e-4eb6-be5c-8dcdc3b944e2" message="END get/personas PROCESS" />
+		<http:request method="POST" doc:name="REQUEST POST persona to SYSTEM API" doc:id="7d968b7f-058f-415c-ad85-dcf343ae9591" config-ref="HTTP_Request_configuration" path="/personas">
+			<http:query-params><![CDATA[#[attributes.queryParams]]]></http:query-params>
+		</http:request>
+		<logger level="INFO" doc:name="" doc:id="cb0dc7a1-745f-44f6-be56-d829f2511e65" message="START get/personas PROCESS" />
+
+    </flow>
+	<flow name="patch:\personas\(id):application\json:personas_papi-config">
+		<logger level="INFO" doc:name="" doc:id="7f4c6bdd-0696-41c7-9cb2-d6226f2f9ab3" message="END get/personas PROCESS" />
+		<http:request method="PATCH" doc:name="REQUEST UPDATE persona to SYSTEM API" doc:id="d24dfa69-1376-471c-b2be-aa93dca570c5" config-ref="HTTP_Request_configuration" path="/personas" >
+			<http:query-params ><![CDATA[#[attributes.queryParams]]]></http:query-params>
+		</http:request>
+		<logger level="INFO" doc:name="" doc:id="f17f747e-20f7-46e2-a1fc-bd27a660fb8a" message="START get/personas PROCESS" />
+
+    </flow>
+	<flow name="delete:\personas\(id):personas_papi-config">
+		<logger level="INFO" doc:name="" doc:id="ce3f1ec5-1f2c-4e8c-bb38-60bd47efd739" message="END get/personas PROCESS" />
+		<http:request method="GET" doc:name="REQUEST get/personas to SYSTEM API" doc:id="7a4fb422-5b7e-4519-86f2-1dd32e1a1b1c" config-ref="HTTP_Request_configuration" path="/personas" >
+			<http:query-params ><![CDATA[#[attributes.queryParams]]]></http:query-params>
+		</http:request>
+		<logger level="INFO" doc:name="" doc:id="2b09ae7a-ca68-44d4-bb60-9f36dc9f65ae" message="START get/personas PROCESS" />
+
+    </flow>
+</mule>

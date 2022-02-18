@@ -1,0 +1,178 @@
+#%RAML 1.0
+title: personas_xapi
+
+/personas:
+  get:
+    queryParameters: 
+      pais:
+        type: string
+        minLength: 1
+        maxLength: 58
+        required: false
+      provincia:
+        type: string
+        minLength: 1
+        maxLength: 58
+        required: false
+      ciudad:
+        type: string
+        minLength: 1
+        maxLength: 58
+        required: false
+      zipcode:
+        type: string
+        minLength: 1
+        maxLength: 10
+    responses:
+      200:
+        body:
+          application/json:
+              example:
+                {
+                  "personas":[
+                    {
+                      "id":1,
+                      "nombre": "Juan",
+                      "apellido": "Perez",
+                      "telefono": "+543424054875",
+                      "pais": "Argentina",
+                      "provincia": "Santa Fe",
+                      "ciudad": "Santa Fe",
+                      "cod_postal": "3000",
+                      "calle": "Bv. Galvez",
+                      "numero": "2432"
+                    },
+                    {
+                      "id": 2,
+                      "nombre": "Hernan",
+                      "apellido": "Santo",
+                      "telefono": "+54114054875",
+                      "pais": "Argentina",
+                      "provincia": "Buenos Aires",
+                      "ciudad": "Campana",
+                      "cod_postal": "2804",
+                      "calle": "Uruguay",
+                      "numero": "1100"
+                    }                   
+                  ]
+                }
+      500:
+        body: 
+          application/json:
+            example:
+              {
+                "message": "Internal Server Error."
+              }
+  post:
+    body: 
+      application/json:
+        properties: 
+          {
+            nombre: string,
+            apellido: string,
+            telefono: string,
+            pais: string,
+            provincia: string,
+            ciudad: string,
+            cod_postal: string,
+            calle: string,
+            numero: string
+          }
+        example:
+          {
+            nombre: "Hernan",
+            apellido: "Santo",
+            telefono: "+54114054875",
+            pais: "Argentina",
+            provincia: "Buenos Aires",
+            ciudad: "Campana",
+            cod_postal: "2804",
+            calle: "Uruguay",
+            numero: "1100"
+          }
+    responses:
+      200:
+       body:
+        application/json:
+          example:
+            {
+              "message": "Persona creada correctamente."
+            }
+      500:
+        body:
+          application/json:
+            example:
+              {
+                "message": "Internal Server Error."
+              }
+  /{id}:
+    get:
+      responses: 
+        200:
+          body:
+            application/json:
+                example:
+                  {
+                      id: 2,
+                      nombre: "Hernan",
+                      apellido: "Santo",
+                      telefono: "+54114054875",
+                      pais: "Argentina",
+                      provincia: "Buenos Aires",
+                      ciudad: "Campana",
+                      cod_postal: "2804",
+                      calle: "Uruguay",
+                      numero: "1100"
+                  }
+    delete:
+      responses:
+        200:
+          body:
+            application/json:
+              example:
+                {
+                  "message": "Persona eliminada correctamente."
+                }
+        500:
+          body:
+            application/json:
+              example:
+                {
+                  "message": "Internal Server Error."
+                }
+    patch:
+      body: 
+        application/json:
+          properties: 
+            {
+                nombre?: string,
+                apellido?: string,
+                telefono?: string,
+                pais?: string,
+                provincia?: string,
+                ciudad?: string,
+                cod_postal?: string,
+                calle?: string,
+                numero?: string
+            }
+          example:
+            {
+              nombre: "Hernan Fernando",
+              apellido: "Santo Gomez",
+              telefono: "+54114222222",
+            }
+      responses:
+        200:
+          body:
+            application/json:
+              example:
+                {
+                  "message": "Datos actualizados correctamente."
+                }
+        500:
+          body:
+            application/json:
+              example:
+                {
+                  "message": "Internal Server Error."
+                }

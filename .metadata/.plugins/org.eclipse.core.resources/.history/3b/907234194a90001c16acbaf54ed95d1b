@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd">
+	<sub-flow name="asd" doc:id="ffa3fca5-e48d-42cf-b92b-1225c225266f" >
+		<on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="a3f7abf5-eb91-4080-8d4c-7e3e48508306" type="ANY">
+			<logger level="ERROR" doc:name="EXPRESSION ERROR LOGGER" doc:id="4df1ef97-2b21-44e9-8ebb-b616054f849f" message="#[error.description]" />
+			<ee:transform doc:name="Expression Error Payload" doc:id="40959974-9aac-442e-81f5-2f85274ddaa5">
+				<ee:message>
+					<ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+{
+	status: 500,
+	description: error.description
+}]]></ee:set-payload>
+				</ee:message>
+			</ee:transform>
+		</on-error-propagate>
+	</sub-flow>
+	<error-handler name="general_error_handler" doc:id="a1057992-744c-4c6e-971a-a89b46ddc3a5" >
+		<on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="16d1e65f-9952-4bd0-91f2-87ca7c1a6739" type="EXPRESSION">
+			<logger level="ERROR" doc:name="EXPRESSION ERROR LOGGER" doc:id="756ad872-09ec-493a-b352-5f235cf434ca" message="#[error.description]"/>
+			<ee:transform doc:name="Expression Error Payload" doc:id="192b3795-6f1a-4635-9ea5-f81200e63d70" >
+				<ee:message >
+					<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+	status: 500,
+	description: "Internal Server Error"
+}]]></ee:set-payload>
+				</ee:message>
+			</ee:transform>
+		</on-error-propagate>
+		<on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="e0e6b4a5-d310-4366-af4b-62da9e9aab5c" type="DB:BAD_SQL_SYNTAX,DB:QUERY_EXECUTION,EXPRESSION">
+			<logger level="ERROR" doc:name="EXPRESSION ERROR LOGGER" doc:id="9c5e76bf-99b3-4b1a-8789-5f6d3d14b459" message="#[error.description]" />
+			<ee:transform doc:name="Expression Error Payload" doc:id="71daa7c4-5eae-4de0-ab7b-2470b2b526df" >
+				<ee:message >
+					<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+	status: 500,
+	description: "Internal Server Error"
+}]]></ee:set-payload>
+				</ee:message>
+			</ee:transform>
+		</on-error-propagate>
+		<on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="6f6f00ef-a2b2-4038-858d-abf15cd8a9a9" type="DB:CONNECTIVITY">
+			<logger level="ERROR" doc:name="EXPRESSION ERROR LOGGER" doc:id="23c831a9-1aa8-43a8-87aa-b593b0eaab30" message="#[error.description]" />
+			<ee:transform doc:name="Expression Error Payload" doc:id="fabd3810-8350-4b9a-81f9-8669f0eeb863" >
+				<ee:message >
+					<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+	status: 503,
+	description: error.description
+}]]></ee:set-payload>
+				</ee:message>
+			</ee:transform>
+		</on-error-propagate>
+		<on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="1eed9c30-20c5-486d-88af-17d6e6be6462" type="HTTP:BAD_GATEWAY, HTTP:BAD_REQUEST, HTTP:CLIENT_SECURITY, HTTP:CONNECTIVITY, HTTP:FORBIDDEN, HTTP:METHOD_NOT_ALLOWED, HTTP:NOT_ACCEPTABLE, HTTP:NOT_FOUND, HTTP:PARSING, HTTP:SERVICE_UNAVAILABLE, HTTP:TIMEOUT" >
+			<logger level="ERROR" doc:name="EXPRESSION ERROR LOGGER" doc:id="21dbf41d-50f0-4f2e-a065-194a3db274dd" message="#[error.description]" />
+			<ee:transform doc:name="Expression Error Payload" doc:id="05b9b0e5-5eb8-4d46-83fa-059b006a229c" >
+				<ee:message >
+					<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+	status: 400,
+	description: error.description
+}]]></ee:set-payload>
+				</ee:message>
+			</ee:transform>
+		</on-error-propagate>
+	</error-handler>
+</mule>

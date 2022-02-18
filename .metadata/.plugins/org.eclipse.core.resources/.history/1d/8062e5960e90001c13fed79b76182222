@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+    <http:request-config name="HTTP_Request_configuration" doc:name="HTTP Request configuration" doc:id="b7183898-8180-408d-b341-53a41a097ea2" basePath="/process" >
+		<http:request-connection host="0.0.0.0" port="8082" />
+	</http:request-config>
+	<flow name="get:\personas:personas-config">
+		<logger level="INFO" doc:name="" doc:id="054d0ce6-c1d9-4240-824e-4a54535e9633" message="START GET /personas"/>
+		<http:request method="GET" doc:name="Request" doc:id="fd924d36-9c01-411d-be44-86fb9b35347c" config-ref="HTTP_Request_configuration" path="/accounts">
+			<http:query-params ><![CDATA[#[attributes.queryParams]]]></http:query-params>
+		</http:request>
+		<logger level="INFO" doc:name="" doc:id="82a4ed8f-d8ca-4a3a-b15e-d6be4fc0b57d" message="END GET /personas" />
+
+    </flow>
+	<flow name="get:\personas\(id):personas-config">
+        <ee:transform doc:name="Copy_of_Transform Message" doc:id="b5703aeb-317d-44d7-ab2d-4ac308965e30">
+			<ee:variables>
+				<ee:set-variable variableName="id"><![CDATA[attributes.uriParams.'id']]></ee:set-variable>
+			</ee:variables>
+		</ee:transform>
+		<http:request method="GET" doc:name="Request" doc:id="b1570e3c-4398-4d3c-b187-f3ed79d811c0" config-ref="HTTP_Request_configuration" path="/accounts/{id}">
+			<http:uri-params ><![CDATA[#[{
+	"id":attributes.uriParams.id
+}]]]></http:uri-params>
+		</http:request>
+		<error-handler ref="general_error_handler" />
+    
+</flow>
+	<flow name="post:\personas:application\json:personas-config">
+		<logger level="INFO" doc:name="" doc:id="ffc9b9e3-c94e-482f-86e5-ee000f7adfce" message="START GET /personas" />
+		<http:request method="POST" doc:name="Copy_of_Request" doc:id="47f88cc1-4740-44af-82c4-a20cfd573db9" config-ref="HTTP_Request_configuration" path="/accounts" >
+		</http:request>
+		<logger level="INFO" doc:name="Copy_of_" doc:id="0c35fbb1-a7f4-4ad8-9077-6f5a8fec2cf6" message="END GET /personas" />
+		<error-handler ref="general_error_handler" />
+    
+</flow>
+	<flow name="patch:\personas\(id):application\json:personas-config">
+        <ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core">
+            <ee:variables>
+                <ee:set-variable variableName="id">attributes.uriParams.'id'</ee:set-variable>
+            </ee:variables>
+        </ee:transform>
+		<http:request method="PATCH" doc:name="Copy_of_Copy_of_Request" doc:id="1eecad8d-0ef4-4db7-a76a-5a8c154f96b1" config-ref="HTTP_Request_configuration" path="/accounts" />
+		<error-handler ref="general_error_handler" />
+    
+</flow>
+	<flow name="delete:\personas\(id):personas-config">
+        <ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core">
+            <ee:variables>
+                <ee:set-variable variableName="id">attributes.uriParams.'id'</ee:set-variable>
+            </ee:variables>
+        </ee:transform>
+		<http:request method="DELETE" doc:name="Copy_of_Request" doc:id="65d871f2-d09c-4079-9531-61bd67eed762" config-ref="HTTP_Request_configuration" path="/accounts/{id}" >
+			<http:uri-params ><![CDATA[#[{
+	"id":attributes.uriParams.id
+}]]]></http:uri-params>
+		</http:request>
+		<error-handler ref="general_error_handler" />
+    
+</flow>
+</mule>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	 <error-handler name="process_error_handlerError_Handler" doc:id="37731835-50ff-40f7-b77b-01389e629e12" >
+		 <on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="9ba55c54-92b6-484a-8266-506e04da0b65" type="ANY">
+			<logger level="ERROR" doc:name="Copy_of_EXPRESSION ERROR LOGGER" doc:id="8d71c726-9600-4a86-9d55-05e801543173" message="#[error.description]" />
+			<ee:transform doc:name="Copy_of_Expression Error Payload" doc:id="48dfa3ba-8e77-48b4-8dda-44bcfdbc205f" >
+				<ee:message >
+					<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+	status: 500,
+	description: error.description
+}]]></ee:set-payload>
+				</ee:message>
+			</ee:transform>
+		</on-error-propagate> 
+	</error-handler>
+</mule>

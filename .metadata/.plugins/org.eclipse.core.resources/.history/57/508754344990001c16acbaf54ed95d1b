@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd">
+	<sub-flow name="asd" doc:id="fb3d5fc2-8d13-4e6d-9196-b7d46599d3a5" >
+		<on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="a3f7abf5-eb91-4080-8d4c-7e3e48508306" type="ANY">
+			<logger level="ERROR" doc:name="Copy_of_EXPRESSION ERROR LOGGER" doc:id="4df1ef97-2b21-44e9-8ebb-b616054f849f" message="#[error.description]" />
+			<ee:transform doc:name="Copy_of_Expression Error Payload" doc:id="40959974-9aac-442e-81f5-2f85274ddaa5">
+				<ee:message>
+					<ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+{
+	status: 500,
+	description: error.description
+}]]></ee:set-payload>
+				</ee:message>
+			</ee:transform>
+		</on-error-propagate>
+	</sub-flow>
+	<error-handler name="general_error_handler" doc:id="a1057992-744c-4c6e-971a-a89b46ddc3a5" >
+		<on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="16d1e65f-9952-4bd0-91f2-87ca7c1a6739" type="EXPRESSION">
+			<logger level="ERROR" doc:name="EXPRESSION ERROR LOGGER" doc:id="756ad872-09ec-493a-b352-5f235cf434ca" message="#[error.description]"/>
+			<ee:transform doc:name="Expression Error Payload" doc:id="192b3795-6f1a-4635-9ea5-f81200e63d70" >
+				<ee:message >
+					<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+	status: 500,
+	description: "Internal Server Error"
+}]]></ee:set-payload>
+				</ee:message>
+			</ee:transform>
+		</on-error-propagate>
+		<on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="e0e6b4a5-d310-4366-af4b-62da9e9aab5c" type="DB:BAD_SQL_SYNTAX"/>
+		<on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="6f6f00ef-a2b2-4038-858d-abf15cd8a9a9" type="DB:CONNECTIVITY"/>
+		<on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="3d2d9261-cc20-4166-9fd2-72b8ecb0ac50" type="DB:QUERY_EXECUTION"/>
+	</error-handler>
+</mule>

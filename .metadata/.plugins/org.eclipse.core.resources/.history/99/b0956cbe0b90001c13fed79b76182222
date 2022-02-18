@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<error-handler name="general_error_handler" doc:id="a1057992-744c-4c6e-971a-a89b46ddc3a5" >
+		<on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="16d1e65f-9952-4bd0-91f2-87ca7c1a6739" type="EXPRESSION">
+			<logger level="ERROR" doc:name="EXPRESSION ERROR LOGGER" doc:id="756ad872-09ec-493a-b352-5f235cf434ca" message="#[error.description]"/>
+			<set-payload value='#[error.description]' doc:name="Set Payload" doc:id="4a1308b0-8865-4f2f-b4f4-9b5c0d110c71" />
+			<ee:transform doc:name="Expression Error Payload" doc:id="192b3795-6f1a-4635-9ea5-f81200e63d70" >
+				<ee:message >
+					<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+	status: 500,
+	errorDescription: payload
+}]]></ee:set-payload>
+				</ee:message>
+			</ee:transform>
+		</on-error-propagate>
+	</error-handler>
+</mule>

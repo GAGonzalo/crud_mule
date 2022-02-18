@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:db="http://www.mulesoft.org/schema/mule/db"
+	xmlns:apikit="http://www.mulesoft.org/schema/mule/mule-apikit" xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
+	xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd">
+    
+    <configuration-properties doc:name="Configuration properties" doc:id="2f964d3e-c525-4a68-bae0-234cfa6ce367" file="properties.yaml" />
+	<db:config name="MySQL_Config" doc:name="Database Config" doc:id="b93d0a17-45aa-425f-906c-c846ea8f0414" >
+		<db:my-sql-connection host="${db.mysql.host}" port="${db.mysql.port}" user="${db.mysql.username}" password="${db.mysql.password}" database="${db.mysql.dbname}" />
+	</db:config>
+	<flow name="get:\personas:personas_sapi-config">
+		<logger level="INFO" doc:name="Logger" doc:id="aaa0b4da-ecd1-42cf-a108-9029cb2cf07a" message="AAAAAAAAAAAAAAAAAAAAA"/>
+		<db:select doc:name="Select" doc:id="3e59e8fb-ff4b-4f6e-aaaf-1258071e69ff" config-ref="MySQL_Config">
+			<db:sql ><![CDATA[SELECT id,nombre,apellido,telefono,pais,provincia,ciudad,cod_postal,calle,numero FROM personas
+ WHERE cod_postal = if(:zipcode is NULL , cod_postal , :zipcode) 
+ AND pais = if(:pais is NULL , pais , :pais)
+ AND provincia = if(:provincia is NULL , provincia , :provincia)
+ AND ciudad = if(:ciudad is NULL , ciudad , :ciudad)]]></db:sql>
+			<db:input-parameters ><![CDATA[#[{
+	pais: attributes.queryParams.pais,
+	provincia: attributes.queryParams.provincia,
+	ciudad: attributes.queryParams.ciudad,
+	zipcode: attributes.queryParams.zipcode		
+}]]]></db:input-parameters>
+		</db:select>
+		<ee:transform doc:name="" doc:id="e1211b38-c792-4374-b356-ea9d2e86fc70" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+payload]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+
+    </flow>
+	<flow name="get:\personas\(id):personas_sapi-config">
+        <set-variable value="#[attributes.uriParams.id as Number]" doc:name="Set Variable" doc:id="dc35d2ce-5e22-4047-b785-7bc4b437ed37" variableName="persona_id" />
+		<db:select doc:name="Select" doc:id="833aa9a1-be9e-4bae-adb3-4cc5a2e4da63" config-ref="MySQL_Config">
+			<db:sql ><![CDATA[SELECT id,nombre,apellido,telefono,pais,provincia,ciudad,cod_postal,calle,numero FROM personas WHERE id = :id]]></db:sql>
+			<db:input-parameters ><![CDATA[#[{
+	id: vars.persona_id
+}]]]></db:input-parameters>
+		</db:select>
+		<ee:transform doc:name="" doc:id="7d4dbc94-0002-4a70-bb08-947bd8632172">
+			<ee:message>
+				<ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+payload]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+    
+</flow>
+	<flow name="post:\personas:application\json:personas_sapi-config">
+		<db:insert doc:id="053f9fbb-c373-4a29-bde5-f27a5a094be5" config-ref="MySQL_Config">
+			<db:sql ><![CDATA[INSERT INTO personas (nombre,apellido,telefono,pais,provincia,ciudad,cod_postal,calle,numero)
+ VALUES (:nombre, :apellido, :telefono, :pais, :provincia, :ciudad, :zipcode, :calle, :numero)]]></db:sql>
+			<db:input-parameters ><![CDATA[#[output application/java
+---
+{
+	nombre:payload.nombre,
+	apellido:payload.apellido,
+	telefono:payload.telefono,
+	pais: payload.pais,
+	provincia: payload.provincia,
+	ciudad: payload.ciudad,
+	zipcode:payload.'cod_postal',
+	calle:payload.calle,
+	numero: payload.numero
+}]]]></db:input-parameters>
+		</db:insert>
+		<ee:transform doc:name="Transform Message" doc:id="c8b62e61-cdb1-49a7-b92c-642d031bb37d" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+	"message":"Persona creada correctamente."
+}]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+
+    </flow>
+	<flow name="patch:\personas\(id):application\json:personas_sapi-config">
+		<set-variable value="#[attributes.uriParams.id as Number]" doc:name="Set Variable" doc:id="4a0ed852-6e8d-47ea-89ee-5d3f21d606bf" variableName="persona_id" />
+		<ee:transform doc:name="Transform Message" doc:id="43d06254-a675-4ea1-b54e-4c81818a3561" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json skipNullOn="everywhere"
+---
+payload]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<db:update doc:name="Update" doc:id="64b88e19-8c17-4123-b5c9-5f9222b87b0a" config-ref="MySQL_Config">
+			<db:sql ><![CDATA[UPDATE personas
+ SET nombre=:nombre, apellido=:apellido,
+  telefono=:telefono, pais=:pais, provincia=:provincia,
+   ciudad=:ciudad, cod_postal=:cod_postal, calle=:calle,
+    numero=:numero
+ WHERE id = :id ]]></db:sql>
+			<db:input-parameters ><![CDATA[#[{
+	nombre: payload.nombre,
+	apellido: payload.apellido,
+	telefono: payload.telefono,
+	pais: payload.pais,
+	provincia: payload.provincia,
+	ciudad:payload.ciudad,
+	"cod_postal":payload.'cod_postal',
+	numero:payload.numero,
+	calle:payload.calle,
+	id: vars.'persona_id'
+}]]]></db:input-parameters>
+		</db:update>
+		<ee:transform doc:name="Transform Message" doc:id="ad1a9f92-4534-4662-9f8a-a35385512413" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+	message:"Persona modificada correctamente."
+}]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+
+    </flow>
+	<flow name="delete:\personas\(id):personas_sapi-config">
+		<set-variable value="#[attributes.uriParams.id as Number]" doc:name="Set Variable" doc:id="ac76c27d-c410-45dd-891d-f07aebe64396" variableName="persona_id" />
+		<db:delete doc:name="Delete" doc:id="380094e0-4f29-409d-a18f-42ac5f24a072" config-ref="MySQL_Config">
+			<db:sql><![CDATA[DELETE FROM personas WHERE id=:id]]></db:sql>
+			<db:input-parameters ><![CDATA[#[{
+	id:vars.'persona_id'
+}]]]></db:input-parameters>
+		</db:delete>
+		<ee:transform doc:name="Transform Message" doc:id="630fe3dd-7c0a-4829-8811-113ce31b9be6" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+	message: "Persona borrada correctamente."
+}]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+    
+</flow>
+</mule>

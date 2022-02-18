@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd">
+	<db:config name="Database_Config" doc:name="Database Config" doc:id="d7ddaa82-7064-44a0-aa40-63489fee95c3" >
+		<db:my-sql-connection host="localhost" port="3306" user="root" password="admin" database="evaluacion" />
+	</db:config>
+	<flow name="system_error_handlerFlow" doc:id="1c8d5302-7492-4972-8c38-a5c7e81a7bd5" >
+		<db:stored-procedure doc:name="Stored procedure" doc:id="71812000-6057-4ba0-ad4b-d9941cfd40ed" config-ref="MySQL_Config"/>
+		<error-handler ref="system_error_handlerError_Handler" />
+	</flow>
+	<error-handler name="system_error_handlerError_Handler" doc:id="2f60923e-64c7-43da-bfcd-22920649a6b8" >
+		<on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="1b52406a-d59f-4beb-b305-d3668a1d322f" type="ANY"/>
+	</error-handler>
+</mule>

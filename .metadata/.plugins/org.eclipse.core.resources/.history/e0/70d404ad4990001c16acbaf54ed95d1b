@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+    <http:request-config name="HTTP_Request_configuration" doc:name="HTTP Request configuration" doc:id="b7183898-8180-408d-b341-53a41a097ea2" basePath="/process" >
+		<http:request-connection host="0.0.0.0" port="8082" />
+	</http:request-config>
+	<flow name="get:\personas:personas-config">
+		<logger level="INFO" doc:name="" doc:id="054d0ce6-c1d9-4240-824e-4a54535e9633" message="START GET /personas"/>
+		<http:request method="GET" doc:name="GET personas to Process API" doc:id="fd924d36-9c01-411d-be44-86fb9b35347c" config-ref="HTTP_Request_configuration" path="/personas">
+			<http:query-params ><![CDATA[#[attributes.queryParams]]]></http:query-params>
+		</http:request>
+		<logger level="INFO" doc:name="" doc:id="82a4ed8f-d8ca-4a3a-b15e-d6be4fc0b57d" message="END GET /personas" />
+		<error-handler ref="general_error_handler" />
+
+    </flow>
+	<flow name="get:\personas\(id):personas-config">
+        <logger level="INFO" doc:name="" doc:id="e488c065-25df-4c49-920f-10c60ba6bd61" message="START GET /personas/{id}" />
+		<ee:transform doc:name="Transform URI Param to Number" doc:id="b5703aeb-317d-44d7-ab2d-4ac308965e30">
+			<ee:variables>
+				<ee:set-variable variableName="id"><![CDATA[attributes.uriParams.'id']]></ee:set-variable>
+			</ee:variables>
+		</ee:transform>
+		<http:request method="GET" doc:name="GET personas/{id} to Process API" doc:id="b1570e3c-4398-4d3c-b187-f3ed79d811c0" config-ref="HTTP_Request_configuration" path="/personas/{id}">
+			<http:uri-params ><![CDATA[#[{
+	"id":attributes.uriParams.id
+}]]]></http:uri-params>
+		</http:request>
+		<logger level="INFO" doc:name="" doc:id="38251a1d-53fd-4f7e-96a0-ae4897aa4b0e" message="END GET /personas/{id}" />
+		<error-handler ref="general_error_handler" />
+    
+</flow>
+	<flow name="post:\personas:application\json:personas-config">
+		<logger level="INFO" doc:name="" doc:id="ffc9b9e3-c94e-482f-86e5-ee000f7adfce" message="START POST /personas" />
+		<http:request method="POST" doc:name="POST persona to Process API" doc:id="47f88cc1-4740-44af-82c4-a20cfd573db9" config-ref="HTTP_Request_configuration" path="/personas" >
+		</http:request>
+		<logger level="INFO" doc:name="" doc:id="0c35fbb1-a7f4-4ad8-9077-6f5a8fec2cf6" message="END POST /personas" />
+		<error-handler ref="general_error_handler" />
+    
+</flow>
+	<flow name="patch:\personas\(id):application\json:personas-config">
+        <logger level="INFO" doc:name="" doc:id="bba02618-9518-4da9-9739-f87093e7271a" message="START PATCH /personas/{id} EXPERIENCE" />
+		<ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" doc:name="Transform URI Param to Number">
+            <ee:variables>
+                <ee:set-variable variableName="id"><![CDATA[attributes.uriParams.'id' as Number]]></ee:set-variable>
+            </ee:variables>
+        </ee:transform>
+		<http:request method="PATCH" doc:name="PATCH personas/{id} to Process API" doc:id="1eecad8d-0ef4-4db7-a76a-5a8c154f96b1" config-ref="HTTP_Request_configuration" path="/personas/{id}" >
+			<http:uri-params ><![CDATA[#[{
+	id:attributes.uriParams.id
+}]]]></http:uri-params>
+		</http:request>
+		<logger level="INFO" doc:name="" doc:id="e10c2878-27b3-4ec6-9682-e789cf517267" message="END PATCH /personas/{id}" />
+		<error-handler ref="general_error_handler" />
+    
+</flow>
+	<flow name="delete:\personas\(id):personas-config">
+        <logger level="INFO" doc:name="" doc:id="d4e2621a-14c4-46ca-9593-0e4ed66897e1" message="START DELETE /personas/{id}" />
+		<ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" doc:name="Transform URI Param to Number">
+            <ee:variables>
+                <ee:set-variable variableName="id">attributes.uriParams.'id'</ee:set-variable>
+            </ee:variables>
+        </ee:transform>
+		<http:request method="DELETE" doc:name="DELETE persona to Process API" doc:id="65d871f2-d09c-4079-9531-61bd67eed762" config-ref="HTTP_Request_configuration" path="/personas/{id}" >
+			<http:uri-params ><![CDATA[#[{
+	"id":attributes.uriParams.id
+}]]]></http:uri-params>
+		</http:request>
+		<logger level="INFO" doc:name="" doc:id="bb3bbfba-00df-44b5-bb3b-139630127a00" message="END DELETE /personas/{id}" />
+		<error-handler ref="general_error_handler" />
+    
+</flow>
+</mule>

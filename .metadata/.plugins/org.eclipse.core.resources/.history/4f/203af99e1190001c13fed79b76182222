@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+    <flow name="get:\personas:personas_papi-config">
+		<logger level="INFO" doc:name="" doc:id="0756347f-5815-4b8e-8a73-ba31781ca64e" message="START get/personas PROCESS"/>
+		<logger level="INFO" doc:name="" doc:id="da3bbc58-8565-401b-9077-2438509baff5" message="END get/personas PROCESS"/>
+
+    </flow>
+	<flow name="get:\personas\(id):personas_papi-config">
+		<logger level="INFO" doc:name="" doc:id="7d40515a-6fb5-4727-a6ed-6f7a50645e23" message="END get/personas PROCESS" />
+		<logger level="INFO" doc:name="" doc:id="ccc2a3a8-1ceb-41ef-a70c-03cf38f6c242" message="START get/personas PROCESS" />
+
+    </flow>
+	<flow name="post:\personas:application\json:personas_papi-config">
+		<logger level="INFO" doc:name="" doc:id="c8d904f8-c94e-4eb6-be5c-8dcdc3b944e2" message="END get/personas PROCESS" />
+		<logger level="INFO" doc:name="" doc:id="cb0dc7a1-745f-44f6-be56-d829f2511e65" message="START get/personas PROCESS" />
+
+    </flow>
+	<flow name="patch:\personas\(id):application\json:personas_papi-config">
+		<logger level="INFO" doc:name="" doc:id="7f4c6bdd-0696-41c7-9cb2-d6226f2f9ab3" message="END get/personas PROCESS" />
+		<logger level="INFO" doc:name="" doc:id="f17f747e-20f7-46e2-a1fc-bd27a660fb8a" message="START get/personas PROCESS" />
+
+    </flow>
+	<flow name="delete:\personas\(id):personas_papi-config">
+		<logger level="INFO" doc:name="" doc:id="ce3f1ec5-1f2c-4e8c-bb38-60bd47efd739" message="END get/personas PROCESS" />
+		<logger level="INFO" doc:name="" doc:id="2b09ae7a-ca68-44d4-bb60-9f36dc9f65ae" message="START get/personas PROCESS" />
+
+    </flow>
+</mule>
