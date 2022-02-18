@@ -5,14 +5,12 @@
     <stringAttribute key="launch_mule_server_version" value="org.mule.tooling.server.4.3.0.ee"/>
     <stringAttribute key="maven.command.line" value=""/>
     <booleanAttribute key="maven.snapshot.updates" value="false"/>
-    <stringAttribute key="mule-agent-port" value="53742"/>
-    <stringAttribute key="mule-agent-token-auth" value="5850f426-893e-4041-905e-65f719be972b"/>
+    <stringAttribute key="mule-agent-port" value="54043"/>
+    <stringAttribute key="mule-agent-token-auth" value="d650849e-a2ad-4242-bca7-2f1abc5e26bc"/>
     <listAttribute key="mule-project-names">
-        <listEntry value="personas_sapi"/>
         <listEntry value="personas_xapi"/>
-        <listEntry value="personas_papi"/>
     </listAttribute>
-    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="personas_sapi"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="personas_xapi"/>
     <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-M-XX:-UseBiasedLocking -M-Dfile.encoding=UTF-8 -M-XX:+UseG1GC -M-XX:+UseStringDeduplication"/>
     <intAttribute key="remote-debug-max-stream-size" value="2"/>
     <intAttribute key="remote-debug-port" value="6666"/>

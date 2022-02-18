@@ -6,6 +6,9 @@
 http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
 http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<flow name="error_handlerFlow" doc:id="55898c2e-4d66-42a5-a4b8-3702ec37a9e7" >
+		<http:request method="GET" doc:name="Request" doc:id="3731ad06-d9b8-4d7d-a5c5-c940637e228d" />
+	</flow>
 	<error-handler name="general_error_handler" doc:id="a1057992-744c-4c6e-971a-a89b46ddc3a5" >
 		<on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="e0e6b4a5-d310-4366-af4b-62da9e9aab5c" type="DB:BAD_SQL_SYNTAX,DB:QUERY_EXECUTION,EXPRESSION">
 			<logger level="ERROR" doc:name="EXPRESSION ERROR LOGGER" doc:id="9c5e76bf-99b3-4b1a-8789-5f6d3d14b459" message="#[error.description]" />
